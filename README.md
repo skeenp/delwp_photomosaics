@@ -11,7 +11,7 @@ The 'meta' folder contains a world file for a selection of tiles in the dataset,
 ## index.geojson
 The index.geojson file describes the extent of each possible image tiles available from the photo mosaic server. The index is derived from standard grid system described at http://services.land.vic.gov.au/maps/imf/search/PhotoMapInformation.jsp, along with tile references for the dataset (below).
 
-![](index.jpeg)
+![](index.jpg)
 
 The dataset contains tiles including:
   - zone > Zone ID
@@ -27,11 +27,11 @@ Each tile will be referenced by its upper left pixel and resolution, as per the 
 # process.py
 The process.py python script will allow you to generate the worldfile for one of the DELWP photomap tiles. To use it you must have python and cv2 (python module) installed. The cv2 module can be installed by calling:
 
-''' pip install opencv-python '''
+``` pip install opencv-python ```
 
 Once installed, the script should work, with the following arguements:
 
-'''usage: process.py [-h] [--bbox x x x x] image path zone gridid
+```usage: process.py [-h] [--bbox x x x x] image path zone gridid
 
 Applies georeference information to delwp historic photomosaic images
 
@@ -44,11 +44,11 @@ optional arguments:
   -h, --help      show this help message and exit
   --bbox x x x x  bounding box of photo in image (xmin, ymin, xmax, ymax in
                   image units)note: bypasses existing bbox values (where
-                  available)'''
+                  available```
 
 An example use case is as follows:
 
-''' python process.py meta\zone6\0855A1.jpg 6 855A1 --bbox 132 70 6184 3573 '''
+``` python process.py meta\zone6\0855A1.jpg 6 855A1 --bbox 132 70 6184 3573 ```
 
 The python script exports a world file in the same location as the referenced image.
 
