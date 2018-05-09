@@ -1,3 +1,4 @@
+
 DELWP Photo Mosaics
 ===========
 
@@ -31,7 +32,8 @@ The process.py python script will allow you to generate the worldfile for one of
 
 Once installed, the script should work, with the following arguements:
 
-```usage: process.py [-h] [--bbox x x x x] image path zone gridid
+```
+usage: process.py [-h] [--bbox x x x x] image path zone gridid
 
 Applies georeference information to delwp historic photomosaic images
 
@@ -44,7 +46,8 @@ optional arguments:
   -h, --help      show this help message and exit
   --bbox x x x x  bounding box of photo in image (xmin, ymin, xmax, ymax in
                   image units)note: bypasses existing bbox values (where
-                  available```
+                  available
+```
 
 An example use case is as follows:
 
